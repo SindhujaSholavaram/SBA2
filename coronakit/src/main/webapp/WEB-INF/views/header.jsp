@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>CoronaKit</title>
+<title></title>
 </head>
 <body>
 <h2>Welcome to Corona Prevention Kit Ordering Portal</h2>

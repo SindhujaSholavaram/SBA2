@@ -24,24 +24,25 @@ public class AdminController {
 	
 	@GetMapping("/home")
 	public String home() {
-		return null;
+		return "main-menu";
 	}
 	
 	@GetMapping("/product-entry")
 	public String productEntry(Model model) {
 		
-		return null;
+		return "show-all-item-admin";
 	}
 	
 	@PostMapping("/product-save")
 	public String productSave(@ModelAttribute ProductMaster product, BindingResult result ) {
 		return null;
+		
 	}
 	
 
 	@GetMapping("/product-list")
 	public String productList(Model model) {
-		return null;
+		return "show-all-item-admin";
 	}
 	
 	@GetMapping("/product-delete/{productId}")

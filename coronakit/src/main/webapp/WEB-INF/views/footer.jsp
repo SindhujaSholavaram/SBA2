@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>FootNote</title>
+<title></title>
 </head>
 <body>
 <h4>Order COVID-19 Prevention Kit today. Stay Safe & Healthy.</h4>

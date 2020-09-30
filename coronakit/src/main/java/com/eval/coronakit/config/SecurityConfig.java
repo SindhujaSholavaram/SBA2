@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/admin/**").hasAuthority("ADMIN")
 		.antMatchers("/user/**").hasAuthority("USER");
 
-		http.formLogin().loginPage("/validate").failureUrl("/validate?error=true").defaultSuccessUrl("/home")
+		http.formLogin().loginPage("/custom-login").failureUrl("/custom-error").defaultSuccessUrl("/home")
 				.usernameParameter("username").passwordParameter("password");
 
 		http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/");

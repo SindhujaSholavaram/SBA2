@@ -7,11 +7,9 @@
 <title>Home</title>
 </head>
 <body>
-<jsp:include page="${pageContext.request.contextPath }/header" />
 <h1>Welcome to Corona-Kit Home...</h1>
 <hr/>
 <a href="${pageContext.request.contextPath}/custom-login"><input type="button" value="Login" /></a>
 <hr/>
-<jsp:include page="${pageContext.request.contextPath }/footer" />
 </body>
 </html>
