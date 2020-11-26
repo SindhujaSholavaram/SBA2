@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.eval.coronakit.entity.Roles;
 
 @Repository
-public interface RolesRepository extends JpaRepository<Roles, String>{
-
+public interface RolesRepository extends JpaRepository<Roles, String> {
+	Roles findByUserName(String userName);
 }

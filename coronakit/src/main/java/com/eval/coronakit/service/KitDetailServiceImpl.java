@@ -8,7 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.eval.coronakit.dao.KitDetailRepository;
+import com.eval.coronakit.dao.RolesRepository;
+import com.eval.coronakit.dao.UserRepository;
 import com.eval.coronakit.entity.KitDetail;
+import com.eval.coronakit.entity.Roles;
+import com.eval.coronakit.entity.User;
 import com.eval.coronakit.exception.CoronaKitException;
 
 @Service
@@ -16,6 +20,12 @@ public class KitDetailServiceImpl implements KitDetailService {
 
 	@Autowired
 	KitDetailRepository repository;
+	
+	@Autowired
+	UserRepository userRepository;
+	
+	@Autowired
+	RolesRepository rolesRepository;
 
 	@Override
 	@Transactional
@@ -38,6 +48,24 @@ public class KitDetailServiceImpl implements KitDetailService {
 	@Override
 	public List<KitDetail> getAllKitItemsOfAKit(int kitId) throws CoronaKitException {
 		return repository.findAll();
+	}
+
+	@Override
+	public boolean deleteProductFromKit(int productId) throws CoronaKitException {
+		if (!repository.existsById(productId)) {
+			throw new CoronaKitException("Product ID Not Found!!");
+		}
+		repository.deleteById(productId);
+		return true;
+	}
+
+	@Override
+	public User addUserDetails(User user, Roles roles) throws CoronaKitException {
+		if(user!=null) {
+			rolesRepository.save(roles);
+			userRepository.save(user);
+		}
+		return user;
 	}
 
 }

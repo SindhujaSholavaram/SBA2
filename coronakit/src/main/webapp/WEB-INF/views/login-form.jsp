@@ -16,6 +16,7 @@
 <spring-form:form action="${pageContext.request.contextPath}/validate" method="POST">
 	<br/>
 	<br/>
+	<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }"/>
 	<label>Enter user name</label>
 	<input type="text" name="username" required />
 	<br/>

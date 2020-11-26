@@ -21,11 +21,9 @@ import org.springframework.test.web.servlet.RequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.eval.coronakit.controller.UserController;
-import com.eval.coronakit.entity.ProductMaster;
 import com.eval.coronakit.service.CoronaKitService;
 import com.eval.coronakit.service.KitDetailService;
 import com.eval.coronakit.service.ProductService;
-import com.eval.coronakit.test.utils.MasterData;
 
 
 

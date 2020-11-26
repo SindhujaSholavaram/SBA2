@@ -37,11 +37,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.headers().frameOptions().disable();
 		
 		// Add Your Application Based Security config here
-		http.authorizeRequests()
+		/*http.authorizeRequests()
 		.antMatchers("/admin/**").hasAuthority("ADMIN")
-		.antMatchers("/user/**").hasAuthority("USER");
+		.antMatchers("/user/**").hasAuthority("USER");*/
 
-		http.formLogin().loginPage("/custom-login").failureUrl("/custom-error").defaultSuccessUrl("/home")
+		http.formLogin().loginPage("/validate").failureUrl("/custom-error").defaultSuccessUrl("/main-menu")
 				.usernameParameter("username").passwordParameter("password");
 
 		http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/");

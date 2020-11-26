@@ -10,6 +10,8 @@
 <h1>Welcome to Corona-Kit Home...</h1>
 <hr/>
 <a href="${pageContext.request.contextPath}/custom-login"><input type="button" value="Login" /></a>
+<span>|</span>
+<a href="${pageContext.request.contextPath}/register-save"><input type="button" value="Register" /></a>
 <hr/>
 </body>
 </html>

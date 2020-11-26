@@ -16,4 +16,14 @@ public class HomeController {
 	public String home() {
 		return  "main-menu";
 	}
+	
+	/*@RequestMapping("/admin/home")
+	public String adminHome() {
+		return  "admin-home";
+	}
+	
+	@RequestMapping("/user/home")
+	public String userHome() {
+		return  "user-home";
+	}*/
 }
