@@ -7,6 +7,7 @@
 <title>Summary</title>
 </head>
 <body>
-
+<h1>Your Order has been placed successfully!!</h1>
+<h4>Thank you and Visit Again!</h4>
 </body>
 </html>

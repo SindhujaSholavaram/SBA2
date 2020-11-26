@@ -7,6 +7,10 @@
 <title>Home - User</title>
 </head>
 <body>
-
+<nav>
+		<a href="${pageContext.request.contextPath}/user/show-list">Items List</a> <span>||</span>
+		<a href="${pageContext.request.contextPath}/user/show-kit">Kit Details</a> <span>||</span> 
+		<a href="${pageContext.request.contextPath}/logout">LOGOUT</a>
+	</nav>
 </body>
 </html>
